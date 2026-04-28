@@ -39,13 +39,10 @@ const Hero = () => {
 
           <div className="mt-9 flex flex-wrap gap-3">
             <Button asChild size="lg" className="h-12 bg-gradient-accent px-7 text-base font-semibold shadow-elevated hover:bg-primary-hover">
-              <a href="#produtos">
+              <a href="https://www.mercadolivre.com.br/pagina/lr20240610114538">
                 Ver produtos
                 <ArrowRight className="ml-1 h-5 w-5 transition-smooth group-hover:translate-x-1" />
               </a>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="h-12 border-white/20 bg-white/5 px-7 text-base font-semibold text-white backdrop-blur-sm hover:bg-white/10 hover:text-white">
-              <a href="#categorias">Explorar categorias</a>
             </Button>
           </div>
 
@@ -54,7 +51,7 @@ const Hero = () => {
             {[
               { icon: ShieldCheck, label: "Garantia", sub: "em todas as peças" },
               { icon: Truck, label: "Envio rápido", sub: "todo o Brasil" },
-              { icon: Star, label: "+10 mil", sub: "clientes satisfeitos" },
+              { icon: Star, label: "Milhares de", sub: "clientes satisfeitos" },
             ].map((b) => (
               <div key={b.label} className="flex items-start gap-2.5">
                 <b.icon className="mt-0.5 h-5 w-5 shrink-0 text-primary" />

@@ -2,46 +2,90 @@ import { useEffect, useState } from "react";
 import ProductCard, { Product } from "./ProductCard";
 import ProductCardSkeleton from "./ProductCardSkeleton";
 
+const MOCK: Product[] = [
+  {
+    id: "1",
+    title: "Capô Dianteiro - VW Gol G5/G6",
+    price: 799.9,
+    category: "Lataria",
+    image:
+      "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=600&q=80",
+    url: "https://www.mercadolivre.com.br",
+  },
+  {
+    id: "2",
+    title: "Paralama Dianteiro Direito - Honda Civic 2012-2016",
+    price: 349.9,
+    category: "Lataria",
+    image:
+      "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=600&q=80",
+    url: "https://www.mercadolivre.com.br",
+  },
+  {
+    id: "3",
+    title: "Porta Dianteira Esquerda - Fiat Palio 2010",
+    price: 999.0,
+    category: "Lataria",
+    image:
+      "https://images.unsplash.com/photo-1549921296-3c3c5c8b4b9b?w=600&q=80",
+    url: "https://www.mercadolivre.com.br",
+  },
+  {
+    id: "4",
+    title: "Tampa Traseira Porta-Malas - Chevrolet Onix",
+    price: 689.9,
+    category: "Lataria",
+    image:
+      "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?w=600&q=80",
+    url: "https://www.mercadolivre.com.br",
+  },
+  {
+    id: "5",
+    title: "Parachoque Dianteiro - Ford Ka 2015-2018",
+    price: 429.9,
+    category: "Lataria",
+    image:
+      "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=600&q=80",
+    url: "https://www.mercadolivre.com.br",
+  },
+  {
+    id: "6",
+    title: "Parachoque Traseiro - Renault Sandero",
+    price: 399.9,
+    category: "Lataria",
+    image:
+      "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=600&q=80",
+    url: "https://www.mercadolivre.com.br",
+  },
+  {
+    id: "7",
+    title: "Grade Frontal - Toyota Corolla 2015",
+    price: 259.9,
+    category: "Lataria",
+    image:
+      "https://images.unsplash.com/photo-1583267746897-2cf415887172?w=600&q=80",
+    url: "https://www.mercadolivre.com.br",
+  },
+  {
+    id: "8",
+    title: "Retrovisor Externo Direito - Hyundai HB20",
+    price: 219.9,
+    category: "Lataria",
+    image:
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=600&q=80",
+    url: "https://www.mercadolivre.com.br",
+  },
+];
+
 const ProductGrid = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const res = await fetch(
-          "https://api.mercadolibre.com/sites/MLB/search?q=recopecas&limit=8",
-          {
-            headers: {
-              "Content-Type": "application/json",
-              "User-Agent": "Mozilla/5.0",
-            },
-          }
-        );
-
-        const data = await res.json();
-        console.log(data);
-
-        const formatted: Product[] = data.results.map((item: any) => ({
-          id: item.id,
-          title: item.title,
-          price: item.price,
-          originalPrice: item.original_price,
-          category: item.category_id,
-          image: item.thumbnail.replace("-I.jpg", "-O.jpg"),
-          url: item.permalink,
-          freeShipping: item.shipping?.free_shipping,
-        }));
-
-        setProducts(formatted);
-      } catch (err) {
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProducts();
+    setTimeout(() => {
+      setProducts(MOCK);
+      setLoading(false);
+    }, 1000); // simula loading
   }, []);
 
   return (
@@ -59,13 +103,9 @@ const ProductGrid = () => {
               Selecionados por nossos especialistas em peças automotivas.
             </p>
           </div>
-          <div className="hidden items-center gap-2 text-sm text-muted-foreground md:flex">
-            <span className="h-2 w-2 rounded-full bg-emerald-500" />
-            Estoque atualizado em tempo real
-          </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-20 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 space-x-4 ml-10">
           {loading
             ? Array.from({ length: 8 }).map((_, i) => (
                 <ProductCardSkeleton key={i} />
