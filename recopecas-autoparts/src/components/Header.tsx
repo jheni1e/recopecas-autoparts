@@ -17,12 +17,12 @@ const Header = () => {
       {/* Top strip */}
       <div className="bg-industrial text-industrial-foreground/90 text-xs">
         <div className="container flex h-8 items-center justify-between">
-          <span className="font-medium">🔧 Frete grátis em peças selecionadas via Mercado Livre</span>
-          <span className="hidden sm:inline text-industrial-foreground/60">Atendimento: Seg-Sáb · 8h às 18h</span>
+          <span className="font-medium ml-2">Frete flexível em peças selecionadas via Mercado Livre.</span>
+          <span className="hidden sm:inline text-industrial-foreground/60">Atendimento: Seg-Sex · 8h às 18h</span>
         </div>
       </div>
 
-      <div className="container flex h-20 items-center gap-6">
+      <div className="container flex h-20 items-center gap-6 ml-5">
         <Logo />
 
         {/* Search */}
@@ -48,8 +48,10 @@ const Header = () => {
           ))}
         </nav>
 
-        <Button variant="default" size="sm" className="hidden md:inline-flex bg-gradient-accent hover:bg-primary-hover">
-          <ShoppingBag className="mr-1.5 h-4 w-4" />
+        <Button
+          variant="default" size="sm" className="hidden md:inline-flex bg-gradient-accent hover:bg-primary-hover"
+          onClick={() => window.open("https://www.mercadolivre.com.br/pagina/lr20240610114538", "_blank", "noopener,noreferrer")}>
+          <ShoppingBag className="mr-1.5 h-4 w-4"/>
           Mercado Livre
         </Button>
 
