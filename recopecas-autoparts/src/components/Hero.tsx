@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-hero" />
       <div className="absolute inset-0 texture-industrial" />
 
-      <div className="container relative z-10 flex min-h-[560px] flex-col justify-center py-20 lg:py-28">
+      <div className="container relative z-10 flex min-h-[560px] flex-col justify-center py-20 lg:py-28 ml-10">
         <div className="max-w-2xl animate-fade-up">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
