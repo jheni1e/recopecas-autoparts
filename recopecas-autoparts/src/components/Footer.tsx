@@ -9,7 +9,7 @@ const socialLinks = [
   },
   {
     icon: MessageCircle,
-    href: "https://wa.me/5541999497413", // seu número com DDD + país
+    href: "https://wa.me/5541999497413",
     label: "WhatsApp",
   },
 ];
@@ -24,7 +24,7 @@ const Footer = () => {
       <div className="h-1 bg-gradient-accent" />
 
       <div className="container py-14">
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 ml-5">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4 px-4 md:px-0">
           <div>
             <Logo variant="light" />
             <p className="mt-4 max-w-xs text-sm text-industrial-foreground/65">
@@ -65,7 +65,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-industrial-foreground/50 md:flex-row ml-5">
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-xs text-industrial-foreground/50 md:flex-row px-4 md:px-0">
           <p>
             © {new Date().getFullYear()} Recopeças. Todos os direitos
             reservados.

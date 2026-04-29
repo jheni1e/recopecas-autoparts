@@ -22,7 +22,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="container flex h-20 items-center gap-6 ml-5">
+      <div className="container flex h-20 items-center gap-6 px-4 md:px-0">
         <Logo />
 
         {/* Search */}

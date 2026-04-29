@@ -91,7 +91,7 @@ const ProductGrid = () => {
   return (
     <section id="produtos" className="py-16 md:py-20">
       <div className="container">
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-4 ml-10">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-4 px-4 md:px-0">
           <div>
             <span className="text-xs font-bold uppercase tracking-[0.25em] text-primary">
               Mais vendidos
@@ -105,7 +105,7 @@ const ProductGrid = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-20 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 space-x-4 ml-10">
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 lg:gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-4 md:px-0">
           {loading
             ? Array.from({ length: 8 }).map((_, i) => (
                 <ProductCardSkeleton key={i} />
