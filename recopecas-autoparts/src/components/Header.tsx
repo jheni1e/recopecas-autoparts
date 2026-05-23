@@ -17,23 +17,13 @@ const Header = () => {
       {/* Top strip */}
       <div className="bg-industrial text-industrial-foreground/90 text-xs">
         <div className="container flex h-8 items-center justify-between">
-          <span className="font-medium ml-2">Frete flexível em peças selecionadas via Mercado Livre.</span>
+          <span className="font-medium ml-2">Frete flexível em peças selecionadas.</span>
           <span className="hidden sm:inline text-industrial-foreground/60">Atendimento: Seg-Sex · 8h às 18h</span>
         </div>
       </div>
 
       <div className="container flex h-20 items-center gap-6 px-4 md:px-0">
         <Logo />
-
-        {/* Search */}
-        <div className="relative hidden flex-1 max-w-xl md:block">
-          <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-          <input
-            type="search"
-            placeholder="Buscar peças, marca ou modelo..."
-            className="h-11 w-full rounded-full border border-border bg-secondary/60 pl-10 pr-4 text-sm outline-none transition-smooth placeholder:text-muted-foreground focus:border-primary focus:bg-background focus:ring-4 focus:ring-primary/10"
-          />
-        </div>
 
         {/* Nav */}
         <nav className="hidden items-center gap-1 lg:flex">
@@ -52,7 +42,7 @@ const Header = () => {
           variant="default" size="sm" className="hidden md:inline-flex bg-gradient-accent hover:bg-primary-hover"
           onClick={() => window.open("https://www.mercadolivre.com.br/pagina/lr20240610114538", "_blank", "noopener,noreferrer")}>
           <ShoppingBag className="mr-1.5 h-4 w-4"/>
-          Mercado Livre
+          Compre aqui
         </Button>
 
         <button
@@ -68,14 +58,6 @@ const Header = () => {
       {open && (
         <div className="border-t border-border bg-background lg:hidden">
           <div className="container space-y-1 py-4">
-            <div className="relative mb-3">
-              <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-              <input
-                type="search"
-                placeholder="Buscar peças..."
-                className="h-11 w-full rounded-full border border-border bg-secondary pl-10 pr-4 text-sm outline-none"
-              />
-            </div>
             {NAV.map((n) => (
               <a
                 key={n.href}

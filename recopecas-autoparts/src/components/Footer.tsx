@@ -29,7 +29,7 @@ const Footer = () => {
             <Logo variant="light" />
             <p className="mt-4 max-w-xs text-sm text-industrial-foreground/65">
               Negócio familiar especializado em peças automotivas de qualidade.
-              Vendas seguras pelo Mercado Livre.
+              Vendas seguras com garantia.
               Atendimento presencial em Curitiba.
             </p>
             <div className="mt-5 flex gap-2">

@@ -19,7 +19,7 @@ const Hero = () => {
         <div className="max-w-2xl animate-fade-up">
           <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary backdrop-blur-sm">
             <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
-            Loja oficial · Mercado Livre
+            Loja oficial
           </span>
 
           <h1 className="mt-6 font-display text-5xl font-extrabold uppercase leading-[0.95] tracking-tight md:text-6xl lg:text-7xl">
@@ -39,8 +39,8 @@ const Hero = () => {
 
           <div className="mt-9 flex flex-wrap gap-3">
             <Button asChild size="lg" className="h-12 bg-gradient-accent px-7 text-base font-semibold shadow-elevated hover:bg-primary-hover">
-              <a href="https://www.mercadolivre.com.br/pagina/lr20240610114538">
-                Ver produtos
+              <a href="https://api.whatsapp.com/send/?phone=5541999497413&text&type=phone_number&app_absent=0">
+                Fale com um vendedor
                 <ArrowRight className="ml-1 h-5 w-5 transition-smooth group-hover:translate-x-1" />
               </a>
             </Button>

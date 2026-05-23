@@ -8,7 +8,6 @@ export type Product = {
   originalPrice?: number;
   image: string;
   category: string;
-  url: string;
   freeShipping?: boolean;
 };
 
@@ -56,16 +55,6 @@ const ProductCard = ({ product }: { product: Product }) => {
         {product.freeShipping && (
           <span className="mt-1 text-xs font-semibold text-emerald-600">Frete grátis</span>
         )}
-
-        <Button
-          asChild
-          className="mt-4 h-10 w-full bg-gradient-accent font-semibold hover:bg-primary-hover"
-        >
-          <a href={product.url} target="_blank" rel="noopener noreferrer">
-            Ver no Mercado Livre
-            <ExternalLink className="ml-1.5 h-4 w-4" />
-          </a>
-        </Button>
       </div>
     </article>
   );
